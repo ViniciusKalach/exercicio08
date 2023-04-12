@@ -53,11 +53,16 @@ public class ClasseProfessor extends ClasseFuncionario {
     
     @Override
     public String toString(){
+        StringBuilder ds = new StringBuilder();
+        for (Disciplina disciplina : disciplinas) {
+            ds.append(disciplina.toString());
+        }
+        
         return  "Nome: "+ getNome() +
                 "\nCPF: "+ getCpf() +
                 "\nCracha: "+ getNumeroCracha() +
                 "\nSalário: "+ getSalario() +
-                "\nCurriculo: "+ getUrlCurriculoLattes();
-        // Criar um for para selecionar a disciplina e rodar o to string
+                "\nCurriculo: "+ getUrlCurriculoLattes() +
+                "\nDisciplinas: "+ ds;
     }
 }
