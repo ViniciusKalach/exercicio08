@@ -29,16 +29,46 @@ public class MenuMain {
             switch (i) {
                 case 1:
                     Disciplina d = new Disciplina();
-                    System.out.println("Você escolheu a oção 1.");
+                    System.out.println("Você escolheu a opção 1.");
                     System.out.println("Insira o nome da disciplina.");
                     d.setNome(read.nextLine());
                     System.out.println("Insira o código da disciplina.");
-                    d.setCodigo(read.nextInt());
-                    read.nextLine();
+                    d.setCodigo(Integer.parseInt(read.nextLine()));
+                    System.out.println("Disciplina " + d.getNome() + " criada com sucesso");
                     break;
                 case 2:
+                    ClasseProfessor prof = new ClasseProfessor();
+                    System.out.println("Você escolheu a opção 2.");
+                    System.out.println("Insira o nome do professor.");
+                    prof.setNome(read.nextLine());
+                    System.out.println("Insira o CPF do professor.");
+                    prof.setCpf(read.nextLine());
+                    System.out.println("Insira o número do crachá do professor.");
+                    prof.setNumeroCracha(Integer.parseInt(read.nextLine()));
+                    System.out.println("Insira o salário do professor.");
+                    prof.setSalario(read.nextDouble());
+                    read.nextLine();
+                    System.out.println("Insira o currículo do professor.");
+                    prof.setUrlCurriculoLattes(read.nextLine());
+                    System.out.println("Professor " + prof.getNome() + " registrado com sucesso");
                     break;
                 case 3:
+                    ClasseAtendente ate = new ClasseAtendente();
+                    System.out.println("Você escolheu a opção 3.");
+                    System.out.println("Insira o nome do atendente.");
+                    ate.setNome(read.nextLine());
+                    System.out.println("Insira o CPF do atendente.");
+                    ate.setCpf(read.nextLine());
+                    System.out.println("Insira o número do crachá do atendente.");
+                    ate.setNumeroCracha(Integer.parseInt(read.nextLine()));
+                    System.out.println("Insira o salário do atendente.");
+                    ate.setSalario(read.nextDouble());
+                    read.nextLine();
+                    System.out.println("Insira o setor do atendente.");
+                    ate.setSetor(read.nextLine());
+                    System.out.println("Insira a funçao do atendente.");
+                    ate.setFuncao(read.nextLine());
+                    System.out.println("Atendente " + ate.getNome() + " registrado com sucesso");
                     break;
                 case 4:
                     break;
